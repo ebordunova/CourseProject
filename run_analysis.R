@@ -77,7 +77,7 @@ AllData$activityID2 <- activityLabels[m,2]
 table(AllData$activityID, AllData$activityID2)
 
 #Extracts the measurements on the mean and standard deviation (PLEASE NORE THAT I DO INCLUDE freqmean BUT DON'T INCLUDE ANGLES)
-subsetData <- AllData[,(1:2,grep("mean|std", colnames(AllData)))]
+subsetData <- AllData[,grep("mean|std", colnames(AllData))]
 str(subsetData)
 
 ##Adding back subject and activity
